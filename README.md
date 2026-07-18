@@ -8,7 +8,8 @@ Static landing page for [Spacercise on Steam](https://store.steampowered.com/app
 - `css/styles.css` — Nocturne design-system tokens (colors, type, buttons, inputs)
 - `css/site.css` — page layout (hero carousel, logo overlay, sections)
 - `js/main.js` — carousel auto-advance + dots, signup button state
-- `images/` — **upload your images here**, see [images/README.md](images/README.md) for the exact filenames
+- `images/slides/` — **drop any screenshots here**; every image in the folder becomes a carousel slide, ordered by filename
+- `images/` — `logo.png` and `dev-logo.png` go here, see [images/README.md](images/README.md)
 
 ## Deploying
 

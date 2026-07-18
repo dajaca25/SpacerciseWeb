@@ -17,16 +17,7 @@
   <div class="hero">
     <div class="hero-track" id="track">
       <div class="slide">
-        <div class="slot-label">Screenshot 1 — upload images/screenshot-1.jpg</div>
-        <img src="images/screenshot-1.jpg" alt="Spacercise gameplay screenshot 1" onerror="this.remove()">
-      </div>
-      <div class="slide">
-        <div class="slot-label">Screenshot 2 — upload images/screenshot-2.jpg</div>
-        <img src="images/screenshot-2.jpg" alt="Spacercise gameplay screenshot 2" onerror="this.remove()">
-      </div>
-      <div class="slide">
-        <div class="slot-label">Screenshot 3 — upload images/screenshot-3.jpg</div>
-        <img src="images/screenshot-3.jpg" alt="Spacercise gameplay screenshot 3" onerror="this.remove()">
+        <div class="slot-label">Upload screenshots to images/slides/ — every image in that folder becomes a slide</div>
       </div>
     </div>
 
@@ -42,12 +33,8 @@
       <p class="hero-tagline">Arcade action and motion tracking fitness excellence</p>
     </div>
 
-    <!-- slide dots -->
-    <div class="hero-dots" id="dots">
-      <button aria-label="Go to screenshot 1" class="active"></button>
-      <button aria-label="Go to screenshot 2"></button>
-      <button aria-label="Go to screenshot 3"></button>
-    </div>
+    <!-- slide dots (built by main.js from the slides folder) -->
+    <div class="hero-dots" id="dots"></div>
 
     <!-- scroll cue -->
     <div class="scroll-cue"><i class="ph ph-caret-down"></i></div>
