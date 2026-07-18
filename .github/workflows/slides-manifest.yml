@@ -1,0 +1,30 @@
+name: Update slides manifest
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'images/slides/**'
+
+permissions:
+  contents: write
+
+jobs:
+  manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Regenerate slides.json
+        run: |
+          ls images/slides | grep -Ei '\.(jpe?g|png|webp|gif|avif)$' | sort \
+            | python3 -c "import json,sys; print(json.dumps([l.strip() for l in sys.stdin], indent=2))" > slides.json
+          cat slides.json
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet slides.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add slides.json
+            git commit -m "Regenerate slides.json [skip ci]"
+            git push
+          fi
