@@ -14,7 +14,3 @@ Static landing page for [Spacercise on Steam](https://store.steampowered.com/app
 ## Deploying
 
 Pushed to `main`, served by GitHub Pages from the repository root. No build step.
-
-## Email signup
-
-The "Notify me" form is front-end only (GitHub Pages has no backend). To collect real emails, point the form at a service like [Formspree](https://formspree.io) or [Buttondown](https://buttondown.com): set the form's `action` to your endpoint and `method="POST"` in `index.html`.

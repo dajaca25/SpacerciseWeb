@@ -75,14 +75,3 @@
     }
   }
 })();
-
-// Email signup — front-end confirmation only (GitHub Pages is static; see README
-// for hooking up a real mailing-list service).
-(function () {
-  var form = document.getElementById('signup-form');
-  var btn = document.getElementById('signup-btn');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    btn.textContent = 'Signed up ✓';
-  });
-})();
