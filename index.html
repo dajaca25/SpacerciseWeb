@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spacercise — Arcade Action &amp; Motion Tracking Fitness</title>
+<meta name="description" content="With just your webcam and a wide variety of exercises, blast your way through endless challenges in this hybrid between exercise gaming and arcade space-shooting.">
+<link rel="icon" href="images/dev-logo.png">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO: auto-sliding screenshot carousel with logo overlay -->
+  <div class="hero">
+    <div class="hero-track" id="track">
+      <div class="slide">
+        <div class="slot-label">Screenshot 1 — upload images/screenshot-1.jpg</div>
+        <img src="images/screenshot-1.jpg" alt="Spacercise gameplay screenshot 1" onerror="this.remove()">
+      </div>
+      <div class="slide">
+        <div class="slot-label">Screenshot 2 — upload images/screenshot-2.jpg</div>
+        <img src="images/screenshot-2.jpg" alt="Spacercise gameplay screenshot 2" onerror="this.remove()">
+      </div>
+      <div class="slide">
+        <div class="slot-label">Screenshot 3 — upload images/screenshot-3.jpg</div>
+        <img src="images/screenshot-3.jpg" alt="Spacercise gameplay screenshot 3" onerror="this.remove()">
+      </div>
+    </div>
+
+    <!-- bottom fade into the page ground -->
+    <div class="hero-fade"></div>
+
+    <!-- game logo overlapping the carousel -->
+    <div class="hero-logo-wrap">
+      <div class="hero-logo">
+        <div class="slot-label">Game logo — upload images/logo.png</div>
+        <img src="images/logo.png" alt="Spacercise logo" onerror="this.remove()">
+      </div>
+      <p class="hero-tagline">Arcade action and motion tracking fitness excellence</p>
+    </div>
+
+    <!-- slide dots -->
+    <div class="hero-dots" id="dots">
+      <button aria-label="Go to screenshot 1" class="active"></button>
+      <button aria-label="Go to screenshot 2"></button>
+      <button aria-label="Go to screenshot 3"></button>
+    </div>
+
+    <!-- scroll cue -->
+    <div class="scroll-cue"><i class="ph ph-caret-down"></i></div>
+  </div>
+
+  <!-- BODY -->
+  <main>
+    <div class="sections">
+      <section>
+        <h1 class="title">Spacercise</h1>
+        <div class="title-rule"></div>
+        <p class="lede">With just your webcam and a wide variety of exercises, blast your way through endless challenges in this hybrid between exercise gaming and arcade space-shooting.</p>
+        <div class="cta-row">
+          <a href="https://store.steampowered.com/app/4974080/Spacercise" target="_blank" rel="noopener" class="btn btn-primary"><i class="ph ph-steam-logo"></i>View on Steam</a>
+          <a href="https://store.steampowered.com/app/4974080/Spacercise" target="_blank" rel="noopener" class="btn btn-secondary"><i class="ph ph-plus-circle"></i>Wishlist on Steam</a>
+        </div>
+      </section>
+
+      <section class="signup">
+        <h2>Get launch updates</h2>
+        <p>One email when Spacercise launches. Nothing else.</p>
+        <form id="signup-form">
+          <input class="input" type="email" required placeholder="you@example.com">
+          <button type="submit" class="btn btn-secondary" id="signup-btn">Notify me</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- fixed developer logo, bottom-left -->
+  <div class="dev-logo">
+    <div class="slot">
+      <div class="slot-label">Dev logo</div>
+      <img src="images/dev-logo.png" alt="Developer logo" onerror="this.remove()">
+    </div>
+  </div>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
