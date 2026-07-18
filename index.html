@@ -28,7 +28,7 @@
     <div class="hero-logo-wrap">
       <div class="hero-logo">
         <div class="slot-label">Game logo — upload images/logo.png</div>
-        <img src="images/logo.png" alt="Spacercise logo" onerror="this.remove()">
+        <img src="images/logo.png" alt="Spacercise logo" onload="this.previousElementSibling.remove()" onerror="this.remove()">
       </div>
       <p class="hero-tagline">Arcade action and motion tracking fitness excellence</p>
     </div>
@@ -68,7 +68,7 @@
   <div class="dev-logo">
     <div class="slot">
       <div class="slot-label">Dev logo</div>
-      <img src="images/dev-logo.png" alt="Developer logo" onerror="this.remove()">
+      <img src="images/dev-logo.png" alt="Developer logo" onload="this.previousElementSibling.remove()" onerror="this.remove()">
     </div>
   </div>
 
