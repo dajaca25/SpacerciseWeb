@@ -99,7 +99,7 @@ section { display: flex; flex-direction: column; gap: var(--space-4); align-item
 
 /* — meet the devs — */
 .devs { gap: var(--space-6); }
-.devs-heading { margin: 0; font-size: 28px; }
+.devs-heading { margin: 0; font-size: 28px; color: var(--color-neutral-300); }
 .dev-card {
   display: flex; flex-direction: column; align-items: center;
   gap: var(--space-3); max-width: 60ch;
@@ -129,7 +129,7 @@ section { display: flex; flex-direction: column; gap: var(--space-4); align-item
 
 /* — contact us — */
 .contact { gap: var(--space-5); }
-.contact-heading { margin: 0; font-size: 28px; }
+.contact-heading { margin: 0; font-size: 28px; color: var(--color-neutral-300); }
 .contact-link {
   display: inline-flex; align-items: center; gap: var(--space-2);
   text-decoration: none;
