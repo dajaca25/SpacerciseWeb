@@ -1,10 +1,12 @@
-name: Update slides manifest
+name: Update image manifests
 
 on:
   push:
     branches: [main]
     paths:
       - 'images/slides/**'
+      - 'images/style-explorations/**'
+      - 'images/vector-mockups/**'
 
 permissions:
   contents: write
@@ -14,17 +16,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Regenerate slides.json
+      - name: Regenerate manifests
         run: |
-          ls images/slides | grep -Ei '\.(jpe?g|png|webp|gif|avif)$' | sort \
-            | python3 -c "import json,sys; print(json.dumps([l.strip() for l in sys.stdin], indent=2))" > slides.json
-          cat slides.json
+          # An empty (or missing) folder must still produce a valid "[]" manifest,
+          # so neither ls nor grep is allowed to fail the step.
+          write_manifest () {
+            { ls "$1" 2>/dev/null || true; } | { grep -Ei '\.(jpe?g|png|webp|gif|avif)$' || true; } | sort \
+              | python3 -c "import json,sys; print(json.dumps([l.strip() for l in sys.stdin if l.strip()], indent=2))" > "$2"
+            echo "$2:"; cat "$2"
+          }
+          write_manifest images/slides slides.json
+          write_manifest images/style-explorations style-explorations.json
+          write_manifest images/vector-mockups vector-mockups.json
       - name: Commit if changed
         run: |
-          if ! git diff --quiet slides.json; then
+          if ! git diff --quiet slides.json style-explorations.json vector-mockups.json; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add slides.json
-            git commit -m "Regenerate slides.json [skip ci]"
+            git add slides.json style-explorations.json vector-mockups.json
+            git commit -m "Regenerate image manifests [skip ci]"
             git push
           fi

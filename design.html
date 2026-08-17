@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spacercise — Design Process</title>
+<meta name="description" content="Figma style exploration and design wireframes from the making of Spacercise.">
+<link rel="icon" href="images/dev-logo.png">
+<link rel="stylesheet" href="css/styles.css?v=3">
+<link rel="stylesheet" href="css/site.css?v=7">
+<link rel="stylesheet" href="css/design.css?v=6">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+</head>
+<body class="design-page">
+<div class="page">
+
+  <!-- grayscale game logo at the top -->
+  <header class="design-header">
+    <div class="design-logo">
+      <div class="slot-label">Game logo — upload images/logo.png</div>
+      <img src="images/logo.png" alt="Spacercise logo" onload="this.previousElementSibling.remove()" onerror="this.remove()">
+    </div>
+    <p class="design-tagline">Design process</p>
+  </header>
+
+  <!-- BODY -->
+  <main>
+    <div class="sections">
+      <section class="docs">
+        <div class="title-rule"></div>
+
+        <figure class="doc">
+          <div class="doc-frame">
+            <object data="pdfs/style-exploration.pdf#view=FitH" type="application/pdf" aria-label="Figma style exploration">
+              <div class="doc-fallback">
+                <p>This browser can't display the PDF inline.</p>
+                <a class="btn btn-primary doc-link" href="pdfs/style-exploration.pdf" target="_blank" rel="noopener"><i class="ph ph-file-pdf"></i>Open the PDF</a>
+              </div>
+            </object>
+          </div>
+          <figcaption class="doc-caption"><strong>Figma style exploration.</strong> I chose a variety of games as references that had either exercise or science fiction themes.</figcaption>
+        </figure>
+
+        <div class="title-rule"></div>
+
+        <figure class="doc">
+          <div class="doc-frame">
+            <object data="pdfs/design-wireframe.pdf#view=FitH" type="application/pdf" aria-label="Figma design wireframe">
+              <div class="doc-fallback">
+                <p>This browser can't display the PDF inline.</p>
+                <a class="btn btn-primary doc-link" href="pdfs/design-wireframe.pdf" target="_blank" rel="noopener"><i class="ph ph-file-pdf"></i>Open the PDF</a>
+              </div>
+            </object>
+          </div>
+          <figcaption class="doc-caption"><strong>Figma design wireframe.</strong> Created to get a sense of the progression between UI pages. This page shows the iterative process, as some pages were moved to the sides and given comments to indicate changes.</figcaption>
+        </figure>
+
+        <div class="title-rule"></div>
+      </section>
+
+      <section class="galleries">
+        <figure class="doc gallery">
+          <ul class="gallery-list" id="style-explorations">
+            <li class="gallery-item"><button type="button" class="gallery-thumb"><img src="images/style-explorations/exploration-1.png" alt="Style exploration 1" loading="lazy"></button></li>
+            <li class="gallery-item"><button type="button" class="gallery-thumb"><img src="images/style-explorations/exploration-2.png" alt="Style exploration 2" loading="lazy"></button></li>
+            <li class="gallery-item"><button type="button" class="gallery-thumb"><img src="images/style-explorations/exploration-3.png" alt="Style exploration 3" loading="lazy"></button></li>
+          </ul>
+          <figcaption class="doc-caption"><strong>Style explorations.</strong></figcaption>
+        </figure>
+
+        <div class="title-rule"></div>
+
+        <figure class="doc gallery">
+          <ul class="gallery-list" id="vector-mockups">
+            <li class="gallery-item"><button type="button" class="gallery-thumb"><img src="images/vector-mockups/00_UI.png" alt="Vector mockup 1" loading="lazy"></button></li>
+            <li class="gallery-item"><button type="button" class="gallery-thumb"><img src="images/vector-mockups/01_UI.png" alt="Vector mockup 2" loading="lazy"></button></li>
+            <li class="gallery-item"><button type="button" class="gallery-thumb"><img src="images/vector-mockups/02_UI.png" alt="Vector mockup 3" loading="lazy"></button></li>
+            <li class="gallery-item"><button type="button" class="gallery-thumb"><img src="images/vector-mockups/03_UI.png" alt="Vector mockup 4" loading="lazy"></button></li>
+            <li class="gallery-item"><button type="button" class="gallery-thumb"><img src="images/vector-mockups/04_UI.png" alt="Vector mockup 5" loading="lazy"></button></li>
+            <li class="gallery-item"><button type="button" class="gallery-thumb"><img src="images/vector-mockups/05_UI.png" alt="Vector mockup 6" loading="lazy"></button></li>
+            <li class="gallery-item"><button type="button" class="gallery-thumb"><img src="images/vector-mockups/06_UI.png" alt="Vector mockup 7" loading="lazy"></button></li>
+            <li class="gallery-item"><button type="button" class="gallery-thumb"><img src="images/vector-mockups/07_UI.png" alt="Vector mockup 8" loading="lazy"></button></li>
+          </ul>
+          <figcaption class="doc-caption"><strong>Vector mockups.</strong> After some initial style exploration, I created these mockups in Affinity Designer based on individual pages.</figcaption>
+        </figure>
+
+        <div class="title-rule"></div>
+      </section>
+
+      <section class="back-row">
+        <a class="btn btn-secondary back-link" href="index.html"><i class="ph ph-arrow-left"></i>Main game's website</a>
+      </section>
+    </div>
+  </main>
+
+  <!-- fixed developer logo, bottom-left -->
+  <div class="dev-logo">
+    <div class="slot">
+      <div class="slot-label">Dev logo</div>
+      <img src="images/dev-logo.png" alt="Developer logo" onload="this.previousElementSibling.remove()" onerror="this.remove()">
+    </div>
+  </div>
+
+</div>
+
+<!-- full-size image viewer, opened by clicking a thumbnail -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden>
+  <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close"><i class="ph ph-x"></i></button>
+  <button type="button" class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image"><i class="ph ph-caret-left"></i></button>
+  <img class="lightbox-img" id="lightbox-img" alt="">
+  <button type="button" class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image"><i class="ph ph-caret-right"></i></button>
+</div>
+
+<script src="js/design.js?v=2"></script>
+</body>
+</html>
